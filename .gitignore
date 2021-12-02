@@ -24,3 +24,5 @@ pnpm-debug.log*
 
 # Firebase config
 /src/firebase/config.js
+
+/package-lock.json
