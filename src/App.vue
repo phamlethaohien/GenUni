@@ -33,7 +33,7 @@
       </nav>
     </div>
 
-    <router-view :app_name="app_name" />
+    <router-view :app_name="app_name" :access_time="count_access_times" />
 
     <footer>
         <div class="container">
@@ -70,13 +70,37 @@
 </template>
 
 <script>
-  export default {
+import db from "./firebase/init";
+export default {
   name: 'App',
   data() {
     return {
-      app_name: 'GenUni'
+      app_name: 'GenUni',
+      count_access_times: 0
     } 
+  },
+  methods: {
+    async getAccessTimes() {
+      await db.collection('access_time')
+        .doc('access')
+        .get()
+        .then(snap =>{
+          this.count_access_times = snap.data().times
+        })
+
+      this.count_access_times = this.count_access_times + 1
+
+      await db.collection('access_time')
+        .doc('access')
+        .set(
+          {
+            times: this.count_access_times
+          }
+        )
+    }
+  },
+  created() {
+    this.getAccessTimes()
   }
-  
 }
 </script>
