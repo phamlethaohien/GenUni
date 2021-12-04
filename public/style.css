@@ -2085,13 +2085,21 @@ input[type="text"] {
   letter-spacing: 1px;
 }
 
+textarea {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
 .input-effect-1,
 .input-effect-2,
 .input-effect-3 {
   border: 1px solid #ccc;
   padding: 7px 14px;
   transition: 0.4s;
-  background: transparent;
+  background: #fff;
 }
 
 .input-effect-1~.focus-border:before,
@@ -2346,6 +2354,8 @@ BUTTON
   transition: all 0.3s ease;
   overflow: hidden;
   z-index: 2;
+  line-height: revert;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .cbtn:after {
@@ -2384,11 +2394,6 @@ BUTTON
 .cbtn-primary:hover {
   background-color: #3DB2FF;
   color: #333;
-}
-
-input[type="submit"] {
-  line-height: revert;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 input[type="submit"].cbtn-primary, .cbtn-primary:after {

@@ -24,9 +24,9 @@
       <!-- Trả lời cho câu hỏi -->
       <!-- Chỗ này em có thể gộp chung thành 1 component Form -->
       <!-- Chỗ này em có thể tìm hiểu thêm model, ref trong vue để thay thế document.getElement -->
-      <form @submit.prevent="addQuestion()">
+      <form @submit.prevent="addQuestion()" class="form-control mb-5">
         <div class="row mb-3">
-          <div class="col-12">
+          <div class="col-10">
             <input
               type="text"
               v-model="new_ques_user_name"
@@ -38,78 +38,100 @@
               <i></i>
             </span>
           </div>
+          <div class="col-2 text-center">
+            <input type="submit" class="cbtn cbtn-primary" />
+          </div>
         </div>
         <div class="row mb-3">
           <div class="col-12 mx-auto">
-            <input
-              type="text"
+            <textarea
               v-model="new_ques_name"
               class="input-effect-2"
               placeholder="Nhập câu hỏi"
+              rows="5"
             />
             <label></label>
             <span class="focus-border">
               <i></i>
             </span>
           </div>          
-        </div>
-        <div class="row">
-          <div class="col-1 mx-auto">
-            <input type="submit" class="cbtn cbtn-primary" />
-          </div>
-        </div>
+        </div>        
       </form>
     </div>
 
     <!-- <h1>This is list of question and answer</h1> -->
     <div class="container">
-      <ul v-for="(question, index) in questions" :key="question.id">
-        <li>
-          Câu hỏi của: {{ question.user_name }} -> {{ question.name }}
-          <ul v-for="answer in answers" :key="answer.id">
-            <li v-if="answer.question_id === question.id">
-              Người trả lời: {{ answer.user_name }} -> {{ answer.name }}
-            </li>
-          </ul>
-        </li>
-
-        <!-- Trả lời cho câu hỏi -->
-        <!-- Chỗ này em có thể gộp chung thành 1 component Form -->
-        <!-- Chỗ này em có thể tìm hiểu thêm model, ref trong vue để thay thế document.getElement -->
-        <input
-          type="text"
-          :class="`ans-user-name${index}`"
-          placeholder="Tên của bạn"
-        />
-        <input
-          type="text"
-          :class="`ans-name${index}`"
-          placeholder="Câu trả lời"
-        />
-        <input
-          type="hidden"
-          :class="`ans-question-id${index}`"
-          :value="question.id"
-        />
-        <button @click.prevent="addAnswer(index)">Submit</button>
-      </ul>
-
-      <!-- Trả lời cho câu hỏi -->
-      <!-- Chỗ này em có thể gộp chung thành 1 component Form -->
-      <!-- Chỗ này em có thể tìm hiểu thêm model, ref trong vue để thay thế document.getElement -->
-      <form @submit.prevent="addQuestion()">
-        <input
-          type="text"
-          v-model="new_ques_user_name"
-          placeholder="Tên của bạn"
-        />
-        <input
-          type="text"
-          v-model="new_ques_name"
-          placeholder="Câu hỏi của bạn"
-        />
-        <input type="submit" />
-      </form>
+      <div class="row mb-2" v-for="(question, index) in questions" :key="question.id">
+        <div class="col-12">
+          <div class="form-control">
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-12">
+                    <h3 class="font-weight-bold mb-0">{{ question.user_name }}</h3>
+                    <div>{{ question.at }}</div>
+                  </div>
+                  <div class="col-12">
+                    <h4>{{ question.name }}</h4>
+                  </div>
+                </div>
+                <hr>
+                Trả lời
+                <div v-for="answer in answers" :key="answer.id" class="row">
+                  <div v-if="answer.question_id === question.id" class="col-12">
+                    <div class="row">
+                      <div class="col-2">
+                        <h5 class="text-right mb-0">{{ answer.user_name }}</h5>
+                        <div class="text-right" style="font-size: small">{{ answer.at }}</div>
+                      </div>
+                      <div class="col-10">
+                        <p class="rounded form-control" style="">{{ answer.name }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <!-- Trả lời cho câu hỏi -->
+              <!-- Chỗ này em có thể gộp chung thành 1 component Form -->
+              <!-- Chỗ này em có thể tìm hiểu thêm model, ref trong vue để thay thế document.getElement -->
+              <input
+                type="hidden"
+                :class="`ans-question-id${index}`"
+                :value="question.id"
+              />
+              <div class="col-2">
+                <input
+                  type="text"
+                  class="input-effect-1"
+                  :class="`ans-user-name${index}`"
+                  placeholder="Tên của bạn"
+                />
+                <label></label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+              <div class="col-8">          
+                <input
+                  type="text"
+                  class="input-effect-3"
+                  :class="`ans-name${index}`"
+                  placeholder="Câu trả lời"
+                />
+                <label></label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+              <div class="col-2 text-center">
+                <button class="cbtn cbtn-success" @click.prevent="addAnswer(index)">Trả lời</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -131,6 +153,7 @@ export default {
   methods: {
     getQuestions() {
       db.collection("questions")
+        .orderBy('at', 'desc')
         .get()
         .then((snap) => {
           snap.forEach((doc) => {
@@ -138,12 +161,14 @@ export default {
               id: doc.id,
               name: doc.data().name,
               user_name: doc.data().user_name,
+              at: doc.data().at.toDate().toLocaleDateString('vi-VN'),
             });
           });
         });
     },
     getAnswers() {
       db.collection("answers")
+        .orderBy('at', 'desc')
         .get()
         .then((snap) => {
           snap.forEach((doc) => {
@@ -152,6 +177,7 @@ export default {
               name: doc.data().name,
               question_id: doc.data().question_id,
               user_name: doc.data().user_name,
+              at: doc.data().at.toDate().toLocaleDateString('vi-VN'),
             });
           });
         });
@@ -162,12 +188,14 @@ export default {
         let newQuestion = {
           name: this.new_ques_name,
           user_name: this.new_ques_user_name,
+          at: new Date(),
         };
   
         // Thêm mới data vào firebase
         db.collection("questions").doc(newId).set(newQuestion);
   
         newQuestion.id = newId;
+        newQuestion.at = newQuestion.at.toLocaleDateString('vi-VN')
   
         this.questions.unshift(newQuestion); // Thêm câu hỏi vừa nhập vào dữ liệu và đẩy lên trước. Ví dụ: [4] -> unshift(7) sẽ dc [7,4]
         this.new_ques_name = ''
@@ -188,10 +216,13 @@ export default {
           question_id: document.getElementsByClassName(
             `ans-question-id${index}`
           )[0].value,
+          at: new Date(),
         };
 
         // Thêm mới data vào firebase
         db.collection("answers").add(newAnswer);
+
+        newAnswer.at = newAnswer.at.toLocaleDateString('vi-VN')
 
         this.answers.unshift(newAnswer); // Thêm câu trả lời vừa nhập vào dữ liệu và đẩy lên trước. Ví dụ: [4] -> unshift(7) sẽ dc [7,4]
         document.getElementsByClassName(`ans-name${index}`)[0].value = "";
@@ -210,3 +241,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .form-control {
+    background-color: rgba(0,0,0,0.1);
+  }
+</style>

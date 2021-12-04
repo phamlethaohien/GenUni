@@ -29,7 +29,7 @@
                     <h4>Google Meet</h4>                      
                   </div>
 
-                  <modal :width='1500' height='auto' :scrollable='true' name="modal-meet" style="z-index: 1200">
+                  <modal :width='1200' height='auto' :scrollable='true' name="modal-meet" style="z-index: 1200">
                     <div
                       @click="hide('meet')"
                       style="float: right; font-size: 50px; margin: 0 50px 50px 50px"

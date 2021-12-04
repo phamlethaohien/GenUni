@@ -90,7 +90,7 @@
                   <i class="fas fa-users"></i>
                 </div>
                 <div>
-                  <h2>931 lượt truy cập</h2>
+                  <h2>{{ randomAccessTimes }} lượt truy cập</h2>
                 </div>
               </div>
             </div>
@@ -143,7 +143,15 @@
 export default {
   name: "Home",
   props: {
-    app_name: String
-  }
+    app_name: String,
+  },
+  computed: {
+    randomAccessTimes() {
+      return (
+        (new Date().getTime() - new Date("2021-12-01T03:24:00").getTime()) /
+        100000
+      ).toFixed(0);
+    },
+  },
 };
 </script>
