@@ -216,7 +216,7 @@ export default {
     addAnswer(index) {
       let ans_name = document.getElementsByClassName(`ans-name${index}`)[0]
       let ans_user_name = document.getElementsByClassName(`ans-user-name${index}`)[0]
-      if (ans_name !== '' && ans_user_name !== '') {
+      if (ans_name.innerText !== '' && ans_name.innerText !== 'Câu trả lời' && ans_user_name.value !== '') {
         let newAnswer = {
           name: ans_name.innerText,
           user_name: ans_user_name.value,
