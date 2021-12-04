@@ -54,7 +54,7 @@
           </div>          
         </div>
         <div class="text-center">
-          <input type="submit" class="cbtn cbtn-primary" />
+          <input type="submit" value="Đặt câu hỏi" class="cbtn cbtn-primary" />
         </div>        
       </form>
     </div>
@@ -76,6 +76,9 @@
                   </div>
                 </div>
                 <hr>
+                <div v-if="checkNotExistAnswer(question.id)" style="font-size: small">
+                  Chưa có câu trả lời nào cho câu hỏi này
+                </div>
                 <div v-for="answer in answers" :key="answer.id" class="row">
                   <div v-if="answer.question_id === question.id" class="col-md-12">
                     <div class="row">
@@ -88,9 +91,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
-                <div v-if="checkExistAnswer(question.id)" style="font-size: small">
-                  Chưa có câu trả lời nào cho câu hỏi này
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@
                 :class="`ans-question-id${index}`"
                 :value="question.id"
               />
-              <div class="col-md-3 col-lg-2 mb-1">
+              <div class="col-lg-2 col-md-3 mb-1">
                 <input
                   type="text"
                   class="input-effect-1"
@@ -117,19 +117,22 @@
                   <i></i>
                 </span>
               </div>
-              <div class="col-lg-7 col-md-6 mb-1">          
-                <input
-                  type="text"
-                  class="input-effect-3"
+              <div class="col-lg-8 col-md-6 mb-1">
+                <div 
+                  class="textarea placeholder input-effect-3"
                   :class="`ans-name${index}`"
-                  placeholder="Câu trả lời"
-                />
+                  contenteditable="true"
+                  @focus="checkFocusContentEmpty(index)"
+                  @blur="checkBlurContentEmpty(index)"
+                >
+                  Câu trả lời
+                </div>
                 <label></label>
                 <span class="focus-border">
                   <i></i>
                 </span>
               </div>
-              <div class="col-lg-2 col-md-3 text-center">
+              <div class="col-lg-2 col-md-3 mx-auto text-center">
                 <button class="cbtn cbtn-success" @click.prevent="addAnswer(index)">Trả lời</button>
               </div>
             </div>
@@ -211,12 +214,12 @@ export default {
         alert('Vui lòng nhập đầy đủ thông tin')
     },
     addAnswer(index) {
-      if (document.getElementsByClassName(`ans-name${index}`)[0].value !== '' &&
-          document.getElementsByClassName(`ans-user-name${index}`)[0] != '') {
+      let ans_name = document.getElementsByClassName(`ans-name${index}`)[0]
+      let ans_user_name = document.getElementsByClassName(`ans-user-name${index}`)[0]
+      if (ans_name !== '' && ans_user_name !== '') {
         let newAnswer = {
-          name: document.getElementsByClassName(`ans-name${index}`)[0].value,
-          user_name: document.getElementsByClassName(`ans-user-name${index}`)[0]
-            .value,
+          name: ans_name.innerText,
+          user_name: ans_user_name.value,
           question_id: document.getElementsByClassName(
             `ans-question-id${index}`
           )[0].value,
@@ -229,8 +232,8 @@ export default {
         newAnswer.at = newAnswer.at.toLocaleDateString('vi-VN')
 
         this.answers.unshift(newAnswer); // Thêm câu trả lời vừa nhập vào dữ liệu và đẩy lên trước. Ví dụ: [4] -> unshift(7) sẽ dc [7,4]
-        document.getElementsByClassName(`ans-name${index}`)[0].value = "";
-        document.getElementsByClassName(`ans-user-name${index}`)[0].value = "";
+        ans_name.innerText = 'Câu trả lời';
+        ans_user_name.value = '';
       }
       else
         alert('Vui lòng nhập đầy đủ thông tin')
@@ -238,12 +241,26 @@ export default {
     randomId() {
       return (Math.random() + 1).toString(36).substring(7);
     },
-    checkExistAnswer(question_id) {
-      this.answers.forEach(answer => {
-        if(answer.question_id === question_id)
-          return false 
-      })
+    checkNotExistAnswer(question_id) {
+      for (let i=0; i<this.answers.length; i++){
+        if(this.answers[i].question_id === question_id)
+          return false
+      }
       return true
+    },
+    checkFocusContentEmpty(index) {
+      let input = document.getElementsByClassName(`ans-name${index}`)[0]
+      if (input.innerText == 'Câu trả lời'){
+        input.innerHTML = ''
+        input.classList.remove('placeholder')
+      }
+    },
+    checkBlurContentEmpty(index) {
+      let input = document.getElementsByClassName(`ans-name${index}`)[0]
+      if (input.innerText == ''){
+        input.innerHTML = 'Câu trả lời'
+        input.classList.add('placeholder')
+      }
     }
   },
   created() {
@@ -256,5 +273,15 @@ export default {
 <style scoped>
   .form-control {
     background-color: rgba(0,0,0,0.1);
+  }
+  h2, h3, h4, h5, h6, p {
+    word-break: break-all;
+  }
+  .textarea {
+    width:100%;
+    height:auto;
+  }
+  .placeholder {
+    color: #757575;
   }
 </style>
