@@ -1,0 +1,112 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  color: #333;
+  user-select: none;
+}
+
+.nav-link{
+  font-size: 16px;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.btn{
+  border: none;
+  margin: 0.3rem;
+  padding: 6px 18px;
+}
+
+.btn-primary{
+  background-color: #FFB830;
+  color: #333;
+}
+
+.btn-primary:hover{
+  background-color: #3DB2FF;
+  color: #333;
+}
+
+.non-register{
+  position: relative;
+  margin-left: 32px;
+}
+
+.carousel-inner img{
+  width: 100%;
+  height: 600px;
+}
+
+.welcome hr{
+  border: 0.3px solid #FFEDDA;
+  width: 50%;
+  margin: auto;
+}
+
+.padding{
+  margin: 40px auto;
+}
+
+a{
+  color: #333;
+  line-height: 30px;
+}
+
+.tools{
+  display: flex;
+  align-items: center;
+}
+
+._1tool{
+  position: relative;
+  margin: 50px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.tool_toClick{
+  cursor: pointer;
+  display: inline-block;
+  margin: 50px;
+}
+
+.tool_toAppear{
+  position: absolute;
+  background: #999;
+  background-color: #FFEDDA;
+  width: 1200px;
+  transition: 0.4s;
+  border-radius: 3px;
+  display: none;
+}
+
+.appear{
+  display: block;
+  margin-left: 60px;
+  box-shadow: 0 2px 5px #999;
+}
+
+.gm_promote{
+  background-image: url(https://ssl.gstatic.com/support/content/images/static/homepage_header_background_v2.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 19.0625rem;
+}
+
+.gm_guide{
+  width: 1000px; height: 570px;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #3DB2FF;
+}
