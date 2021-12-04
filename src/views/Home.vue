@@ -142,5 +142,8 @@
 
 export default {
   name: "Home",
+  props: {
+    app_name: String
+  }
 };
 </script>

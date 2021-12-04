@@ -104,5 +104,8 @@
 
 export default {
   name: 'Happy_learning',
+  props: {
+    app_name: String
+  }
 }
 </script>

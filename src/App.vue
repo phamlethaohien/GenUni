@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div id="nav">
-
       <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top ">
         <div class="container">
           <a href="" class="navbar-brand">
@@ -12,10 +11,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
-                <router-link class="nav-item" to="/">Home</router-link>
-                <router-link class="nav-item" to="/qa">Góc trao đổi</router-link>
-                <router-link class="nav-item" to="/happy_learning">Học vui - học hiệu quả</router-link>
-                <router-link class="nav-item" to="/school">Trường học</router-link>
+                <li class="nav-item">
+                  <router-link class="nav-link" to="/">Home</router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link class="nav-link" to="/qa">Góc trao đổi</router-link>
+                </li>
+                <div class="nav-item">
+                  <router-link class="nav-link" to="/happy_learning">Học vui - học hiệu quả</router-link>
+                </div>
+                <li class="nav-item">
+                  <router-link class="nav-link" to="/school">Trường học</router-link>
+                </li>
               </ul>
             </div>
             <!-- <a href="" class="navbar-nav non-register"> -->
@@ -26,7 +33,7 @@
       </nav>
     </div>
 
-    <router-view/>
+    <router-view :app_name="app_name" />
 
     <footer>
         <div class="container">

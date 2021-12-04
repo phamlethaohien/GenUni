@@ -17,7 +17,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  linkActiveClass: "active",
   created () {
     AOS.init()
   },
