@@ -60,8 +60,11 @@
             </div>
           </div>
           <div style="padding-bottom: 10px;">
-            <p class="text-center font-weight-bold">Sản phẩm dự thi cuộc thi Khoa học Kĩ thuật 2021</p>
-            <p class="text-center font-weight-bold">Đơn vị: Trường Tiểu học và Trung học Cơ sở Gio Hải số 2</p>
+            <p class="text-center font-weight-bold">
+              <i class="far fa-copyright"></i>
+              Bản quyền thuộc về GenUni | Do not reup
+            </p>
+            <!-- <p class="text-center font-weight-bold">Đơn vị: Trường Tiểu học và Trung học Cơ sở Gio Hải số 2</p> -->
           </div>
         </div>
       </footer>

@@ -10,7 +10,7 @@
               </ul>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img class="slide-images" src="https://www.colorhexa.com/3db2ff.png" alt="">
+                  <img class="slide-images" src="../assets/happy_learning_1.jpg" alt="">
                 </div>
                 <div class="carousel-item">
                   <img class="slide-images" src="https://www.colorhexa.com/ff2442.png" alt="">
@@ -41,7 +41,7 @@
               <div class="row text-center padding">
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   <h3 class="display-5">Quản lí thời gian</h3>
-                  <img src="https://i.pinimg.com/originals/0f/00/e1/0f00e1fdbdc45f7abeac51108dc6e804.png" alt="" style="width: 100px; height: 100px; margin: 20px 0;">
+                  <img src="../assets/clock.png" alt="" style="width: 100px; height: 100px; margin: 20px 0;">
                   <ul class="list-unstyled">
                     <li><a target="_blank" href="https://thehanoichamomile.com/2019/10/03/quan-ly-cong-viec-va-thoi-gian-hieu-qua-voi-google-calendar-va-todoist/">Quản lí thời gian với Google Calendar & Todoist</a></li>
                     <li><a target="_blank" href="https://andrews.edu.vn/quy-tac-80-20-chia-khoa-vang-trong-quan-tri-nang-suat/">Quy luật 80/20 (Pareto Principle)</a></li>
@@ -52,11 +52,24 @@
                     <li><a target="_blank" href="https://blog.japan-itworks.vn/vi/quy-tac-40302010-phuong-phap-quan-ly-thoi-gian-khoa-hoc-nhat-876">Quy tắc 40/30/20/10</a></li>
                     <li><a target="_blank" href="https://uplift.vn/mo-hinh-4d-quan-ly-thoi-gian-gia-tang-hieu-qua-cong-viec">Mô hình 4D: Do – Dump – Delegate – Defer</a></li>
                   </ul>
-                  
+                </div>
+                <div class="col-sm-12 col-md-4">
+                  <h3 class="display-5">Học tập không khó</h3>
+                  <img src="../assets/knowledge.png" alt="" style="width: 100px; height: 100px; margin: 20px 0;">
+                  <ul class="list-unstyled">
+                    <li class="font-weight-bold" style="font-size: 20px;" >APPS SIÊU XỊN Ở GOOGLE PLAY</li>
+                    <li>Focus to do – Pomodoro Timer & To Do List</li>
+                    <li>Brain Focus Productivity Timer</li>
+                    <li>Stay Focused</li>
+                    <li>myHomework Student Planner</li>
+                    <li>Khan Academy</li>
+                    <li>Google Calendar</li>
+                    <li>Google Keep</li>
+                  </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                   <h3 class="display-5">Trăm môn nghìn cách học</h3>
-                  <img src="https://www.pngrepo.com/download/253142/school-board.png" alt="" style="width: 100px; height: 100px; margin: 20px 0;">
+                  <img src="../assets/school_board.png" alt="" style="width: 100px; height: 100px; margin: 20px 0;">
                   <ul class="list-unstyled">
                     <li><a target="_blank" href="https://trungthanh.net/pomodoro-la-gi/">Phương pháp quả cà chua - Pomodoro</a></li>
                     <li><a target="_blank" href="https://unica.vn/blog/mindmap-la-gi-lam-the-nao-ve-so-do-tu-duy">Sơ đồ tư duy (Mind-map)</a></li>
@@ -70,31 +83,65 @@
                     
                   </ul>
                 </div>
+              </div>
+            </div>
+
+            <div class="container padding">
+              <div class="row text-center padding">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <h3 class="display-5">Cùng nhau học ngoại ngữ</h3>
+                  <img src="../assets/languages.webp" alt="" style="width: 100px; height: 100px; margin: 20px 0;">
+                  <ul class="list-unstyled">
+                    <li><a target="_blank" href="https://www.duolingo.com/">Duolingo: học tiếng Anh miễn phí</a></li>
+                    <li><a target="_blank" href="https://www.thegioididong.com/tin-tuc/memrise-co-the-giup-ban-nho-hon-40-tu-trong-1-gio-722339">Memrise Easy Language Learning</a></li>
+                    <li><a target="_blank" href="https://www.cambly.com/english?lang=en">English Tutors Online - Cambly</a></li>
+                    <li><a target="_blank" href="https://bloganchoi.com/review-ung-dung-cake-hoc-tieng-anh-tren-may-tinh/">Cake: Học mẫu câu mỗi ngày</a></li>
+                    <li><a target="_blank" href="https://chiasepremium.com/ung-dung-lingodeer-premium-plus">LingoDeer - Learn Languages</a></li>
+                    <li><a target="_blank" href="https://matchstix.io/vi/cach-su-dung-ung-dung-mondly-de-hoc-tieng-anh-va-cac-ngon-ngu-khac-ngon-ngu/">Học tiếng Anh Mỹ – Mondly</a></li>
+                    <li><a target="_blank" href="https://vi.wikipedia.org/wiki/Busuu">Busuu: Learn Languages</a></li>
+                    <li><a target="_blank" href="https://quizlet.com/latest">Quizlet: Học tiếng và từ vựng</a></li>
+                    <li><a target="_blank" href="https://www.lonelyplanet.com/">Lonely Planet</a></li>
+                    <li><a target="_blank" href="https://conversationexchange.com/">Conversation Exchange</a></li>
+                    <li><a target="_blank" href="https://www.fluentin3months.com/">Fluentin3months</a></li>
+                  </ul>
+                </div>
                 <div class="col-sm-12 col-md-4">
-                  <h3 class="display-5">Apps / Websites</h3>
-                  <img src="https://iconarchive.com/download/i99518/webalys/kameleon.pics/Vector.ico" alt="" style="width: 100px; height: 100px; margin: 20px 0;">
+                  <h3 class="display-5">Học tiếng Anh nào!</h3>
+                  <img src="../assets/english.png" alt="" style="width: 140px; height: 100px; margin: 20px 0;">
                   <ul class="list-unstyled">
                     <li class="font-weight-bold" style="font-size: 20px;" >TỪ ĐIỂN ANH-ANH</li>
                     <li><a target="_blank" href="https://dictionary.cambridge.org/">Cambridge Dictionary</a></li>
                     <li><a target="_blank" href="https://www.ldoceonline.com/">Longman Dictionary of Contemporary English</a></li>
                     <li><a target="_blank" href="https://www.collinsdictionary.com/">Collins Online Dictionary</a></li>
-                    <li><a target="_blank" href="https://www.thesaurus.com/"></a>Thesaurus.com</li>
+                    <li><a target="_blank" href="https://www.thesaurus.com/">Thesaurus.com</a></li>
                     <li><a target="_blank" href="https://www.oxfordlearnersdictionaries.com/">Oxford Learner's Dictionaries</a></li>
-                    <li><a target="_blank" href="https://www.merriam-webster.com/">Dictionary by Merriam-Webster</a></li>
-                    <li><a target="_blank" href="https://www.macmillandictionary.com/"></a>Macmillan Dictionary</li>
+                    <li><a target="_blank" href="https://www.macmillandictionary.com/">Macmillan Dictionary</a></li>
+
+                    <li class="font-weight-bold" style="font-size: 20px;" >PHÁT TRIỂN 4 KỸ NĂNG</li>
+                    <li><a target="_blank" href="https://www.ted.com/">TED - Ideas worth spreading</a></li>
+                    <li><a target="_blank" href="https://www.udemy.com/">Udemy - Courses on Demand</a></li>
+                    <li><a target="_blank" href="https://qz.com/">Quartz - Global business news and insights</a></li>
+                    <li><a target="_blank" href="https://www.economist.com/">The Economist - World News, Politics, Business ...</a></li>
                   </ul>
-                  <ul class="list-unstyled">
-                    <li class="font-weight-bold" style="font-size: 20px;" >APPS HỌC NGOẠI NGỮ</li>
-                    <li><a target="_blank" href="https://vi.wikipedia.org/wiki/Duolingo">Duolingo: học tiếng Anh miễn phí</a></li>
-                    <li><a target="_blank" href="https://www.thegioididong.com/tin-tuc/memrise-co-the-giup-ban-nho-hon-40-tu-trong-1-gio-722339">Memrise Easy Language Learning</a></li>
-                    <li><a target="_blank" href="https://bloganchoi.com/review-ung-dung-cake-hoc-tieng-anh-tren-may-tinh/">Cake: Học mẫu câu mỗi ngày</a></li>
-                    <li><a target="_blank" href="https://chiasepremium.com/ung-dung-lingodeer-premium-plus">LingoDeer - Learn Languages</a></li>
-                    <li><a target="_blank" href="https://matchstix.io/vi/cach-su-dung-ung-dung-mondly-de-hoc-tieng-anh-va-cac-ngon-ngu-khac-ngon-ngu/">Học tiếng Anh Mỹ – Mondly</a></li>
-                    <li><a target="_blank" href="https://vi.wikipedia.org/wiki/Busuu">Busuu: Learn Languages</a></li>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                  <h3 class="display-5">Vui học tiếng Anh</h3>
+                  <img src="../assets/game.webp" alt="" style="width: 100px; height: 100px; margin: 20px 0;">
+                  <ul class="list-unstyled">                  
+                    <li>Scrabble</li>
+                    <li>Word Cookies!</li>
+
+                    <li>Game Concentration</li>
+                    <li>FastEnglish!</li>
+                    <li>Crossword</li>
+                    <li>Choices: Stories You Play</li>
+                    <li>Game Flip Image</li>
+                    <li>Words Crush: Hidden Themes</li>
                   </ul>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
   </div>

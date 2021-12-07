@@ -5,7 +5,7 @@
         Chào mừng bạn đến với không gian
       </h3>
       <img
-        src="https://i.pinimg.com/originals/b8/9a/22/b89a22f1e76528ed333e962719167322.png"
+        src="../assets/qa.png"
         alt=""
         style="
           display: block;

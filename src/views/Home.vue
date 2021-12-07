@@ -14,7 +14,7 @@
               <div class="carousel-item active">
                 <img
                   class="slide-images"
-                  src="https://lh3.googleusercontent.com/FYohEeEzq59WZg5tf_-4qNMxp3LQEhx3KYr0vdekHJHu78Pysx0tu2ZxCRcLgy_dIZUSGlGqfQYFW20GwRi1AXy8E7_AIcsRBxwENSRVr0hrZSqjfGKyHEYEMrXzrx-GXCcDWzXI_4tmTnGV4Jj2MZP65iPUEkcG7SF1A6OMZr7QqJ8m_7_YOXdjmmYDSzhhpBuBO_ANhLDIGn_V5U3CFd_aydMPVehSCWhC2eof1TR0IT6LUzk-D9H6HW9ogn7qqp4-m5t3hjS2yTTDfn_EMBHw_YN0qOaLQmcDIk33puZT61OBG6L0se61oGwNT8jJX2AuEiVc94b1Topn2pWEYoUp5xZXW5VSl4lZC2PTAzOjLKZw9StOCZqNB-OXr9FrhPd9SfFvSQjg5KJmV4ZLWvtccx3nSyy6ybxFW-qpfsgCmBet5gz_lGgmVyRvATeFvo9YyIIEL5StGGUIdGVyfCga_WyBgsTbLMYf-e-PptaKyufGdvRONEYU9oOr6OH27h0bXYBH2bN6tekbRoidharpkNhjZ2FAMckTHL3ReDY0wfk3patEn7oMQrA4qYoX1c6_DGqy_N8ooddzI2WqNKi2yImT4yx4_Yax9iqBJLoT2TVwuyeUTTaaQww6qMC28rlXaqm_dh5nMMz_yBdxW8-1MlXM98qHvHViK-Nyz3KFOSxajNhrlnuQPLJ6qQKvQxouxCt_cZEsDRnkTkXYjr0=w1210-h667-no?authuser=3"
+                  src="../assets/slide1.jpg"
                   alt=""
                 />
               </div>
@@ -67,7 +67,7 @@
                     color: #ffa100;
                   "
                 >
-                  20 - 11 - 2021
+                  04 - 11 - 2021
                 </h3>
                 <h2>Chính thức ra mắt {{ app_name }}</h2>
               </div>
@@ -121,9 +121,9 @@
                   những bạn bè khác mỗi khi bạn có những bài tập khó. Ngoài ra,
                   {{ app_name }} cũng đã tổng hợp được những phương pháp học
                   tập, những ứng dụng & websites, hy vọng phần nào đó hữu ích
-                  đối với bạn. Cố lên nhé!
+                  đối với bạn.
                 </p>
-                <button class="btn btn-primary">Tham gia ngay!</button>
+                <!-- <button class="btn btn-primary">Tham gia ngay!</button> -->
               </div>
             </div>
           </div>

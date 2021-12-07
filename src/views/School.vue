@@ -25,7 +25,7 @@
               <div class="tools justify-content-center padding">
                 <div class="_1tool">
                   <div class="text-center" @click="show('meet')">
-                    <img src="https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v1/web-96dp/logo_meet_2020q4_color_2x_web_96dp.png" alt="">
+                    <img src="../assets/meet.png" alt="">
                     <h4>Google Meet</h4>                      
                   </div>
 
@@ -42,7 +42,7 @@
 
                 <div class="_1tool">
                   <div class="text-center">
-                    <img src="https://cdn.tgdd.vn/2021/10/GameApp/zoom-icon-logo-200x200.png" alt="" style="width: 200px; height: 200px;">
+                    <img src="../assets/zoom.png" alt="" style="width: 200px; height: 200px;">
                     <h4>Zoom</h4>
                   </div>
 
@@ -53,14 +53,14 @@
 
                 <div class="_1tool">
                   <div class="text-center">
-                    <img src="https://ssl.gstatic.com/images/branding/product/2x/hh_drive_96dp.png" alt="" style="width: 200px; height: 200px;">
+                    <img src="../assets/drive.png" alt="" style="width: 200px; height: 200px;">
                     <h4>Google Drive</h4>
                   </div>                  
                 </div>
 
                 <div class="_1tool">
                   <div class="text-center">
-                    <img src="https://is3-ssl.mzstatic.com/image/thumb/Purple116/v4/7c/be/d8/7cbed87e-e50c-394b-a27f-dbc6f3abc7ca/AppIcon-1x_U007emarketing-0-10-0-0-85-220.png/230x0w.webp" alt="" style="width: 190px; height: 190px; border-radius: 3px;">
+                    <img src="../assets/quizziz.webp" alt="" style="width: 190px; height: 190px; border-radius: 3px;">
                     <h4>Quizizz</h4>
                   </div>
 
